@@ -13,7 +13,7 @@
 </head>
 <body>
     
-     <!-- ***Formulario de Login*** -->
+     <!-- *** Formulario de LOGIN *** -->
   <main>
     <div id="main-container">
       <section class="section-forms">
@@ -52,19 +52,69 @@
             </div>
         </div>    
                 
+        <!-- *** Formulario de IDENTIFICATE *** -->
+        <div id="formIdentificate" class="hidden">
+            <h6 class="slogan-login">¡JUNTOS PODEMOS SEGUIR AHORRANDO AGUA!</h6>
+            <p class="valid-inputs" id="valid-inputs2"> </p>
+
+            <div class="input-field col s12">
+                <select>
+                  <option value="" disabled selected>Selecciona un perfil</option>
+                  <option value="1">Empresa</option>
+                  <option value="2">Colaborador</option>
+                  <option value="3">Usuario</option>
+                </select>
+                <label> Identifícate</label>
+              </div>
+          <br>
+      </div>    
+
         <!-- *** Formulario de Registro *** -->
         <div id="formRegister" class="hidden">
           <form>
             <p class="slogan">¡Ahorramos agua, damos vida!</p>
             <p class="valid-inputs" id="valid-inputs"> </p>
+
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">person_outline</i>
+                <input id="razonsocial" type="text" class="validate">
+                <label for="razonsocial">Razón Social</label>
+              </div>
+            </div>
+
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">person_outline</i>
+                <input id="RUC" type="text" class="validate">
+                <label for="RUC">RUC</label>
+              </div>
+            </div>
+
             <div class="inputs">
               <div class="input-field col s12">
                 <i class="material-icons prefix">person_outline</i>
                 <input id="nameUser" type="text" class="validate">
-                <label for="nameUser">Nombre</label>
+                <label for="nameUser">Nombre de contacto</label>
               </div>
             </div>
   
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">person_outline</i>
+                <input id="celular" type="text" class="validate">
+                <label for="celular">celular</label>
+              </div>
+            </div>
+
+            <div class="inputs">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">person_outline</i>
+                <input id="sector" type="text" class="validate">
+                <label for="sector">Sector</label>
+              </div>
+            </div>
+
             <div class="inputs">
               <div class="input-field col s12">
                 <i class="material-icons prefix">mail_outline</i>

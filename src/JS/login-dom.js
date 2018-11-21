@@ -4,6 +4,7 @@ const registerButton = document.getElementById('registerButton');
 const loginButton = document.getElementById('loginButton');
 const formInicio = document.getElementById('formInicio');
 const formRegister = document.getElementById('formRegister');
+const formIdentificate = document.getElementById('formIdentificate');
 const registerLink = document.getElementById('registerLink');
 const emailLogin = document.getElementById('email-login');
 const passwordLogin = document.getElementById('password-login');
@@ -17,10 +18,12 @@ const validInputs = document.getElementById('valid-inputs');
 const validInputs2 = document.getElementById('valid-inputs2');
 const errorPassword = document.getElementById('error-password');
 
+// ***************** No tienes cuenta, Registrate  ************************
 if (registerLink != null) {
   registerLink.addEventListener('click', () => {
-    formRegister.classList.remove('hidden');
+    formIdentificate.classList.remove('hidden');
     formInicio.classList.add('hidden');
+    
     nameUser.value = '';
     email.value = '';
     password.value = '';
@@ -28,6 +31,11 @@ if (registerLink != null) {
     validInputs.innerHTML = '';
   })
 }
+
+// ***************** Inicializo select "Identificate"  ************************
+$(document).ready(function(){
+  $('select').formSelect();
+});
 
 // ***************** Registra datos  ************************
 if (registerButton != null) {

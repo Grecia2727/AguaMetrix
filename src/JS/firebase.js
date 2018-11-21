@@ -17,6 +17,7 @@ const saveData = (userId, name, email, imageUrl) => {
       email: email,
       picture: imageUrl,
       id: userId,
+      // ============== 
     });
   }
 
