@@ -9,6 +9,7 @@ const registerLink = document.getElementById('registerLink');
 const emailLogin = document.getElementById('email-login');
 const passwordLogin = document.getElementById('password-login');
 const updatePassword = document.getElementById('update-password');
+const btnsiguiente = document.getElementById('btn-siguiente');
 
 const nameUser = document.getElementById('nameUser');
 const email = document.getElementById('email');
@@ -36,6 +37,22 @@ if (registerLink != null) {
 $(document).ready(function(){
   $('select').formSelect();
 });
+
+// ***************** Registra datos  ************************
+if (btnsiguiente != null) {
+  btnsiguiente.addEventListener('click', () => {
+    formRegister.classList.remove('hidden');
+    formInicio.classList.add('hidden');
+    formIdentificate.classList.add('hidden');
+    
+    nameUser.value = '';
+    email.value = '';
+    password.value = '';
+    confirPassword.value = '';
+    validInputs.innerHTML = '';
+  })
+}
+
 
 // ***************** Registra datos  ************************
 if (registerButton != null) {
