@@ -3,6 +3,10 @@
   display: none; 
   padding-top: 30px;
 } 
+
+.show {
+  display: block;
+}
   
 body {
   /* background-image:url(img/fondo.jpg); */

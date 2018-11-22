@@ -10,14 +10,18 @@
   firebase.initializeApp(config);
 
 // Guardar datos de login en BD
-const saveData = (userId, name, email, imageUrl) => {
-    firebase.database().ref('users/' + userId).
+const saveData = (empresaId, razonSocial, RUC, nameContactoEmpresa, celularEmpresa, sectorEmpresa, emailEmpresa, imageUrl) => {
+    firebase.database().ref('empresa/' + empresaId).
     set({
-      username: name,
-      email: email,
+      razonSocial: razonSocial,
+      RUC: RUC,
+      nameContactoEmpresa: nameContactoEmpresa,
+      celularEmpresa: celularEmpresa,
+      sectorEmpresa: sectorEmpresa,
+      emailEmpresa: emailEmpresa,
       picture: imageUrl,
-      id: userId,
-      // ============== 
+      id: empresaId,
+      // ==============  
     });
   }
 
@@ -27,16 +31,16 @@ const registerNew = (email, password) => {
       .then((result) => {
         const user = result.user;
         if (user.displayName == null) {
-          username = document.getElementById('nameUser').value;
+          nameContactoEmpresa = document.getElementById('nameContactoEmpresa').value;
         } else {
-          username = user.displayName;
+          nameContactoEmpresa = user.displayName;
         }
         if (user.photoURL == null) {
           picture = "https://thumbs.dreamstime.com/b/icono-del-usuario-46707697.jpg";
         } else {
           picture = user.photoURL;
         }
-        saveData(user.uid, username, user.email, picture);
+        saveData(user.uid, razonSocial, RUC, nameContactoEmpresa, celularEmpresa, sectorEmpresa, user.emailEmpresa, picture);
         check();
         alert('Tu usuario ha sido registrado! \nConfirma el mensaje de verificación en tu correo y seguidamente puedes Iniciar Sesión');
         formRegister.classList.add('hidden');
