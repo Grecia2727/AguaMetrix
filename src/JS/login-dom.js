@@ -11,7 +11,7 @@ const formRegisterUsuario = document.getElementById('formRegisterUsuario');
 const formIdentificate = document.getElementById('formIdentificate');
 const registerLink = document.getElementById('registerLink');
 const emailLogin = document.getElementById('email-login');
-const passwordLogin = document.getElementById('password-login');
+const passwordLogin = document.getElementById('password-login'); 
 const updatePassword = document.getElementById('update-password');
 
 const nameUser = document.getElementById('nameUser');
@@ -38,7 +38,6 @@ const empresaPertenece = document.getElementById('empresaPertenece');
 const nameColaborador = document.getElementById('nameColaborador');
 const celularColaborador = document.getElementById('celularColaborador');
 const emailColaborador = document.getElementById('emailColaborador');
-
 // const passwordColaborador = document.getElementById('passwordColaborador');
 const errorpasswordColaborador = document.getElementById('error-passwordColaborador');
 const confirPasswordColaborador = document.getElementById('confirPasswordColaborador');
@@ -99,40 +98,40 @@ function functionIdentificate() {
 // ***************** Registra datos de las EMPRESAS *****************************************
 if (registerButtonEmpresa != null) {
   registerButtonEmpresa.addEventListener('click', () => {
-  razonSocialE = razonSocial.value;
-  RUCE = RUC.value;
-  nameContactoEmpresaE = nameContactoEmpresa.value;
-  celularEmpresaE = celularEmpresa.value;
-  sectorEmpresaE = sectorEmpresa.value;
-  emailEmpresaE = emailEmpresa.value;
-  passwordEmpresaE = passwordEmpresa.value;
-  confirPasswordEmpresaE = confirPasswordEmpresa.value;
+  erazonSocial = razonSocial.value;
+  eRUC = RUC.value;
+  enameContactoEmpresa = nameContactoEmpresa.value;
+  ecelularEmpresa = celularEmpresa.value;
+  esectorEmpresa = sectorEmpresa.value;
+  eemailEmpresa = emailEmpresa.value;
+  epasswordEmpresa = passwordEmpresa.value;
+  econfirPasswordEmpresa = confirPasswordEmpresa.value;
 
-  if (validationRegisterEmpresa(razonSocial, RUC, nameContactoEmpresa, celularEmpresa, sectorEmpresa, emailEmpresa, passwordEmpresa, confirPasswordEmpresa) === true) {
-    registerNew(emailEmpresa, passwordEmpresa);
+  if (validationRegisterEmpresa(erazonSocial, eRUC, enameContactoEmpresa, ecelularEmpresa, esectorEmpresa, eemailEmpresa, epasswordEmpresa, econfirPasswordEmpresa) === true) {
+    registerNew(eemailEmpresa, epasswordEmpresa);
   }
   else {
-    if (isNotEmpty(razonSocial) === false) {
+    if (isNotEmpty(erazonSocial) === false) {
       validInputs.innerHTML = 'Ingrese Razón Social';
-    } else if (isNotEmpty(RUC) === false){
+    } else if (isNotEmpty(eRUC) === false){
       validInputs.innerHTML = 'Ingrese número de RUC de la empresa';
-    } else if (isNotEmpty(nameContactoEmpresa) === false){
+    } else if (isNotEmpty(enameContactoEmpresa) === false){
       validInputs.innerHTML = 'Ingrese un nombre del contacto';
-    } else if (isNotEmpty(celularEmpresa) === false){
+    } else if (isNotEmpty(ecelularEmpresa) === false){
       validInputs.innerHTML = 'Ingrese teléfono o celular de la empresa';
-    } else if (maxLenght(celularEmpresa) === false) {
-      validInputs.innerHTML = 'Verifique el numero ingresado';
-    } else if (isNotEmpty(sectorEmpresa) === false){
+    } else if (maxLenght(ecelularEmpresa) === false) {
+      validInputs.innerHTML = 'Verifique el número ingresado';
+    } else if (isNotEmpty(esectorEmpresa) === false){
       validInputs.innerHTML = 'Ingrese sector';
-    } else if (isEmail(emailEmpresa) === false) {
+    } else if (isEmail(eemailEmpresa) === false) {
       validInputs.innerHTML = 'Ingrese email válido';
-    } else if (isNotEmpty(passwordUser) === false) {
+    } else if (isNotEmpty(epasswordEmpresa) === false) {
       validInputs.innerHTML = 'Ingrese contraseña con mínimo 6 caracteres';
-    } else if (isNotEmpty(confirPasswordUser) === false) {
+    } else if (isNotEmpty(econfirPasswordEmpresa) === false) {
       validInputs.innerHTML = 'Confirmar contraseña';
-    } else if (equalPassword(passwordUser, confirPasswordUser) === false) {
+    } else if (equalPassword(epasswordEmpresa, econfirPasswordEmpresa) === false) {
       validInputs.innerHTML = 'Las contraseñas no coinciden';
-    } else if (miniLenght(passwordUser) === false) {
+    } else if (miniLenght(epasswordEmpresa) === false) {
       validInputs.innerHTML = 'Su contraseña debe tener mínimo 6 caracteres';
     }
   }
@@ -143,31 +142,35 @@ if (registerButtonEmpresa != null) {
 // ***************** Registra datos de los COLABORADORES *****************************************
 if (registerButtonColaborador != null) {
   registerButtonColaborador.addEventListener('click', () => {
-    empresaPertenece = empresaPertenece.value;
-    nameColaborador = nameColaborador.value;
-    celularColaborador = celularColaborador.value;
-    emailColaborador = emailColaborador.value;
-    passwordColaborador = passwordColaborador.value;
-    confirPasswordColaborador = confirPasswordColaborador.value;
+    cempresaPertenece = empresaPertenece.value;
+    cnameColaborador = nameColaborador.value;
+    ccelularColaborador = celularColaborador.value;
+    cemailColaborador = emailColaborador.value;
+    cpasswordColaborador = passwordColaborador.value;
+    cconfirPasswordColaborador = confirPasswordColaborador.value;
 
-  if (validationRegisterColaborador(empresaPertenece, nameColaborador, celularColaborador, emailColaborador, passwordColaborador, confirPasswordColaborador) === true) {
-   registerNew(emailUser, passwordUser);
+  if (validationRegisterColaborador(cempresaPertenece, cnameColaborador, ccelularColaborador, cemailColaborador, cpasswordColaborador, cconfirPasswordColaborador) === true) {
+   registerNew(cemailColaborador, cpasswordColaborador);
   }
-  // else {
-  //   if (isNotEmpty(nameUsers) === false) {
-  //     validInputs.innerHTML = 'Ingrese su nombre';
-  //   } else if (isEmail(emailUser) === false) {
-  //     validInputs.innerHTML = 'Ingrese email válido';
-  //   } else if (isNotEmpty(passwordUser) === false) {
-  //     validInputs.innerHTML = 'Ingrese contraseña con mínimo 6 caracteres';
-  //   } else if (isNotEmpty(confirPasswordUser) === false) {
-  //     validInputs.innerHTML = 'Confirmar contraseña';
-  //   } else if (equalPassword(passwordUser, confirPasswordUser) === false) {
-  //     validInputs.innerHTML = 'Las contraseñas no coinciden';
-  //   } else if (miniLenght(passwordUser) === false) {
-  //     validInputs.innerHTML = 'Su contraseña debe tener mínimo 6 caracteres';
-  //   }
-  // }
+  else {
+    if (isNotEmpty(cempresaPertenece) === false) {
+      validInputs.innerHTML = 'Ingrese nombre de la empresa donde labora';
+    } else if (isNotEmpty(cnameColaborador) === false) {
+      validInputs.innerHTML = 'Ingrese su nombre';
+    } else if (isNotEmpty(ccelularColaborador) === false) {
+      validInputs.innerHTML = 'Ingrese su número de celular';
+    } else if (isEmail(cemailColaborador) === false) {
+      validInputs.innerHTML = 'Ingrese email válido';
+    } else if (isNotEmpty(cpasswordColaborador) === false) {
+      validInputs.innerHTML = 'Ingrese contraseña con mínimo 6 caracteres';
+    } else if (isNotEmpty(cconfirPasswordColaborador) === false) {
+      validInputs.innerHTML = 'Confirmar contraseña';
+    } else if (equalPassword(cpasswordColaborador, cconfirPasswordColaborador) === false) {
+      validInputs.innerHTML = 'Las contraseñas no coinciden';
+    } else if (miniLenght(cpasswordColaborador) === false) {
+      validInputs.innerHTML = 'Su contraseña debe tener mínimo 6 caracteres';
+    }
+  }
 });
 }
 
@@ -175,13 +178,13 @@ if (registerButtonColaborador != null) {
 // ***************** Registra datos de los USUARIOS *****************************************
 if (registerButtonUsuario != null) {
   registerButtonUsuario.addEventListener('click', () => {
-    nameUsers = nameUsuario.value;
-    uCelularUsuario = celularUsuario.value;
-    uEmailUsuario = emailUsuario.value;
-    uPasswordUsuarior = passwordUsuarior.value;
-    uPonfirPasswordUsuario = confirPasswordUsuario.value;
+    unameUsuario = nameUsuario.value;
+    ucelularUsuario = celularUsuario.value;
+    uemailUsuario = emailUsuario.value;
+    upasswordUsuario = passwordUsuario.value;
+    uconfirPasswordUsuario = confirPasswordUsuario.value;
 
-  if (validationRegisterUser(nameUsers, emailUser, passwordUser, confirPasswordUser) === true) {
+  if (validationRegisterUser(unameUsuario, ucelularUsuario, uemailUsuario, upasswordUsuario, uconfirPasswordUsuario) === true) {
     registerNew(emailUser, passwordUser);
   }
   // else {
