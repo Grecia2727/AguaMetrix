@@ -4,10 +4,16 @@ const isEmail = value => (regularExpresion.test(value))
 const equalPassword = (password, confirPassword) => password === confirPassword;
 const miniLenght = value => (value.length >= 6);
 const isMessage = value => (value.trim() !== '');
+const maxLenght = value =>(value.length <= 9);
 
-//  Valida los campos al Registrar Nuevo Usuario
-const validationRegisterUser = (nameUser, email, password, confirPassword) => {
-  const isValid = (isNotEmpty(nameUser)
+//  Valida los campos al Registrar Nuevo EMPRESA
+const validationRegisterEmpresa = (razonSocial, RUC, nameContactoEmpresa, celularEmpresa, sector, email, password, confirPassword) => {
+  const isValid = (isNotEmpty(razonSocial)
+    && isNotEmpty(RUC)
+    && isNotEmpty(nameContactoEmpresa)
+    && isNotEmpty(celularEmpresa)
+    && maxLenght(celularEmpresa)
+    && isNotEmpty(sector)
     && isEmail(email)
     && isNotEmpty(password)
     && isNotEmpty(confirPassword)
@@ -15,6 +21,36 @@ const validationRegisterUser = (nameUser, email, password, confirPassword) => {
     && miniLenght(password));
   return isValid;
 }
+
+//  Valida los campos al Registrar Nuevo COLABORADOR
+const passwordColaborador = document.getElementById('passwordColaborador');
+const validationRegisterColaborador = (empresaPertenece, nameColaborador, celularColaborador, emailColaborador, password, confirPasswordColaborador) => {
+const isValid = (isNotEmpty(empresaPertenece)
+    && isNotEmpty(nameColaborador)
+    && isNotEmpty(celularColaborador)
+    && maxLenght(celularColaborador)
+    && isNotEmpty(password)
+    && isEmail(email)
+    && isNotEmpty(password)
+    && isNotEmpty(confirPassword)
+    && equalPassword(password, confirPassword)
+    && miniLenght(password));
+  return isValid;
+}
+
+//  Valida los campos al Registrar Nuevo Usuario
+const validationRegisterUser = (nameUsuario, celularUsuario, emailUsuario, passwordUsuario, confirPasswordUsuario) => {
+  const isValid = (isNotEmpty(nameUsuario)
+    && isNotEmpty(celularUsuario)
+    && maxLenght(celularUsuario)
+    && isEmail(emailUsuario)
+    && isNotEmpty(passwordUsuario)
+    && isNotEmpty(confirPasswordUsuario)
+    && equalPassword(passwordUsuario, confirPasswordUsuario)
+    && miniLenght(passwordUsuario));
+  return isValid;
+}
+
 
 // Validando Login: email y password correctos
 const isValidLogin = (email, password) => (isEmail(email) && isNotEmpty(password));
@@ -27,6 +63,8 @@ const validationPublicPost = (newPost) => isMessage(newPost);
 
 // Exportando funciones al Objeto Global windown
 window.isValidLogin = isValidLogin;
+window.validationRegisterEmpresa = validationRegisterEmpresa;
+window.validationRegisterColaborador = validationRegisterColaborador;
 window.validationRegisterUser = validationRegisterUser;
 window.validationPublicPost = validationPublicPost;
 window.validationUpdatePassword = validationUpdatePassword;
