@@ -1,53 +1,137 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AguaMetrik</title>
-    <link rel="icon" href="https://static.wixstatic.com/media/0c718c_0fb26d9c3e424535a0c895890d8429b0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/0c718c_0fb26d9c3e424535a0c895890d8429b0%7Emv2.png" type="image/png">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AguaMetrik</title>
+  <link rel="icon" href="https://static.wixstatic.com/media/0c718c_0fb26d9c3e424535a0c895890d8429b0%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/0c718c_0fb26d9c3e424535a0c895890d8429b0%7Emv2.png"
+    type="image/png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="css/plataforma.css">
 </head>
-<body> 
 
+<body>
 
-    welcome !!!
-    welcome !!!
-    welcome !!!
-    welcome !!!
-
-    <!-- MENU HAMBURQUESA (SIDENAV) -->
-    <nav> <!-- navbar content here  --> </nav>
-    <ul id="slide-out" class="sidenav">
-      <li><div class="user-view">
-        <div class="background">
-          <img src="images/office.jpg">
+  <!-- MENU HAMBURQUESA (SIDENAV) -->
+  <!-- <nav class="indigo darken-4"> <img class="circle" src="IMG/Icono/AguaMetrik.ico"> -->
+    <nav class="indigo blue darken-1"> <img class="circle" src="IMG/Icono/AguaMetrik.ico">
+  </nav>
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background indigo blue darken-1">
+          <img class="tamano" src="">
         </div>
-        <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
-        <a href="#name"><span class="white-text name">John Doe</span></a>
-        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-      </div></li>
-      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-      <li><a href="#!">Second Link</a></li>
-      <li><div class="divider"></div></li>
-      <li><a class="subheader">Subheader</a></li>
-      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-    </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#user"><img class="circle" src="IMG/Logos/Favicon-Aguaconserve.jpg"></a>
+        <a href="#name"><span class="white-text name">Nombre Empresa</span></a>
+        <!-- <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a> -->
+      </div>
+    </li>
+    <li><a href="#seguimientoATuconsumo" id="btn-seguimientoATuconsumo"><i class="material-icons">chrome_reader_mode</i>Seguimiento a tu consumo</a></li>
+    <!-- <li><a href="#!">Hacer un diagnóstico</a></li> -->
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="subheader">También puedes:</a></li>
+    <li><a class="waves-effect" href="#menuRealizarUnDiagnostico" id="btn-menuRealizarUnDiagnostico"><i class="material-icons">touch_app</i>Realizar un diagnóstico</a></li>
+    <li><a class="waves-effect" href="#menuVerDashboard" id="btn-menuVerDashboard">                  <i class="material-icons">track_changes</i>Ver dashboard</a></li>
+    <li><a class="waves-effect" href="#menuNuestraTecnologia" id="btn-menuNuestraTecnologia">        <i class="material-icons">business</i>Nuestra tecnología</a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="indigo blue darken-1 sidenav-trigger btn-floating pulse"><i class="material-icons">menu</i></a>
 
 
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"> </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="firebase.js"> </script>
-    <script src="js/validations.js">   </script>
-    <script src="js/login-dom.js"> </script>
+  <!-- SECCIÓN SEGUIMIENTO A TU CONSUMO -->
+  <section id="seccionSeguimientoATuConsumo" class="hidden">
+      <div class="container">
+          <h4 id="seguimientoATuconsumo" class="color-black"> SEGUIMIENTO CONSUMO </h4>
+          <table class="highlight">
+            <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Item Name</th>
+                  <th>Item Price</th>
+              </tr>
+            </thead>
     
+            <tbody>
+              <tr>
+                <td>Alvin</td>
+                <td>Eclair</td>
+                <td>$0.87</td>
+              </tr>
+              <tr>
+                <td>Alan</td>
+                <td>Jellybean</td>
+                <td>$3.76</td>
+              </tr>
+              <tr>
+                <td>Jonathan</td>
+                <td>Lollipop</td>
+                <td>$7.00</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+  </section>
+
+
+  <!-- SECCIÓN REALIZAR UN DIAGNÓSTICO -->
+  <aside id="seccionRealizarUnDiagnostico" class="hidden">
+      <div class="container">
+          <h5 id="realizarUnDiagnostico" class="color-black"> DIAGNOSTICO </h5>
+      </div>
+  </aside>
+
+
+  <!-- SECCIÓN VER DASHBOARD - GRAFICOS -->
+  <aside id="seccionVerDashboard" class="hidden">
+      <div class="container">
+          <h5 id="verDashboard" class="color-black"> DASHBOARD </h5>
+          <img src="IMG/dashboard.png">
+      </div>
+  </aside>
+
+  <!-- SECCIÓN NUESTRA TECNOLOGÍA -->
+  <aside id="seccionNuestraTecnologia" class="hidden">
+    <div class="container">
+      <h5 id="menuNuestraTecnologia"> NUETSRA TECNOLOGIA </h5>
+      <p> It looks like you're using the development build of the Firebase JS SDK.
+        When deploying Firebase apps to production, it is advisable to only import
+        the individual SDK components you intend to use.</p>
+      <p> It looks like you're using the development build of the Firebase JS SDK.
+        When deploying Firebase apps to production, it is advisable to only import
+        the individual SDK components you intend to use.</p>
+
+    </div>
+    <div class="video-container">
+      <!-- para link dek video considerar el link: EMBED CODE; solo el link de video  -->
+      <iframe width="853" height="480" src="//www.youtube.com/embed/EB4BG3QZn3o" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- <video class="responsive-video" controls>
+        <source src="movie.mp4" type="video/mp4">
+    </video> -->
+
+  </aside>
+
+
+  <!-- SECCIÓN REALIZAR UN DIAGNÓSTICO -->
+  <footer>
+
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="firebase.js"> </script>
+  <script src="js/validations.js">   </script>
+  <script src="js/login-dom.js"> </script>
+  <script src="js/plataforma-dom.js"> </script>
+
 </body>
 </html>

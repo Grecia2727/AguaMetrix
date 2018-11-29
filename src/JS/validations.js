@@ -61,6 +61,45 @@ const validationUpdatePassword = (email) => isEmail(email);
 // Valida publicacion en el muro
 const validationPublicPost = (newPost) => isMessage(newPost);
 
+// Valida el ingreso de numero, y no permite ingresar otro digito
+// ==============================================================
+function soloNumerosEmpresa(e) {
+  // capturamos la tecla pulsada
+  let teclaPulsada = window.event ? window.event.keyCode : e.which;
+  // capturamos el contenido del input
+  let valor = document.getElementById("celularEmpresa").value;
+  if (teclaPulsada == 45 && valor.indexOf("-") == -1) {
+    document.getElementById("celularEmpresa").value = "-" + valor;
+  }
+  if (teclaPulsada == 13 || (teclaPulsada == 46 && valor.indexOf(".") == -1)) {
+    return true;
+  }
+  // devolvemos true o false dependiendo de si es numerico o no
+  return /\d/.test(String.fromCharCode(teclaPulsada));
+}
+
+
+function soloNumerosColaborador(e) {
+  let teclaPulsada = window.event ? window.event.keyCode : e.which;
+  let valor = document.getElementById("celularColaborador").value;
+  if (teclaPulsada == 45 && valor.indexOf("-") == -1) {
+    document.getElementById("celularColaborador").value = "-" + valor;
+  } if (teclaPulsada == 13 || (teclaPulsada == 46 && valor.indexOf(".") == -1)) {
+    return true;
+  } return /\d/.test(String.fromCharCode(teclaPulsada));
+}
+
+
+function soloNumerosUsuario(e) {
+  let teclaPulsada = window.event ? window.event.keyCode : e.which;
+  let valor = document.getElementById("celularUsuario").value;
+  if (teclaPulsada == 45 && valor.indexOf("-") == -1) {
+    document.getElementById("celularUsuario").value = "-" + valor;
+  } if (teclaPulsada == 13 || (teclaPulsada == 46 && valor.indexOf(".") == -1)) {
+    return true;
+  } return /\d/.test(String.fromCharCode(teclaPulsada));
+}
+
 // Exportando funciones al Objeto Global windown
 window.isValidLogin = isValidLogin;
 window.validationRegisterEmpresa = validationRegisterEmpresa;

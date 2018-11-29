@@ -64,6 +64,11 @@ if (registerLink != null) {
   })
 }
 
+// ***************** Inicializo SIDE NAV ************************
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+
 // ***************** Inicializo select "Identificate"  ************************
 $(document).ready(function(){
   $('select').formSelect();
@@ -95,7 +100,7 @@ function functionIdentificate() {
   }
 }
 
-// ***************** Registra datos de las EMPRESAS *****************************************
+// ***************** Registra datos de las EMPRESAS ************************************
 if (registerButtonEmpresa != null) {
   registerButtonEmpresa.addEventListener('click', () => {
   erazonSocial = razonSocial.value;
@@ -108,7 +113,7 @@ if (registerButtonEmpresa != null) {
   econfirPasswordEmpresa = confirPasswordEmpresa.value;
 
   if (validationRegisterEmpresa(erazonSocial, eRUC, enameContactoEmpresa, ecelularEmpresa, esectorEmpresa, eemailEmpresa, epasswordEmpresa, econfirPasswordEmpresa) === true) {
-    registerNew(eemailEmpresa, epasswordEmpresa);
+    registerNewEmpresa(eemailEmpresa, epasswordEmpresa);
   }
   else {
     if (isNotEmpty(erazonSocial) === false) {
@@ -139,7 +144,7 @@ if (registerButtonEmpresa != null) {
 }
 
 
-// ***************** Registra datos de los COLABORADORES *****************************************
+// ***************** Registra datos de los COLABORADORES ********************************
 if (registerButtonColaborador != null) {
   registerButtonColaborador.addEventListener('click', () => {
     cempresaPertenece = empresaPertenece.value;
@@ -150,7 +155,7 @@ if (registerButtonColaborador != null) {
     cconfirPasswordColaborador = confirPasswordColaborador.value;
 
   if (validationRegisterColaborador(cempresaPertenece, cnameColaborador, ccelularColaborador, cemailColaborador, cpasswordColaborador, cconfirPasswordColaborador) === true) {
-   registerNew(cemailColaborador, cpasswordColaborador);
+   registerNewColaborador(cemailColaborador, cpasswordColaborador);
   }
   else {
     if (isNotEmpty(cempresaPertenece) === false) {
@@ -175,7 +180,7 @@ if (registerButtonColaborador != null) {
 }
 
 
-// ***************** Registra datos de los USUARIOS *****************************************
+// ***************** Registra datos de los USUARIOS *************************************
 if (registerButtonUsuario != null) {
   registerButtonUsuario.addEventListener('click', () => {
     unameUsuario = nameUsuario.value;
@@ -217,3 +222,37 @@ loginButton.addEventListener('click', () => {
   }
 });
 }
+
+
+
+// *********** Resetea contraseña **************************
+if (updatePassword != null) {
+  updatePassword.addEventListener('click', () => {
+    if (emailLogin.value === '') {
+      validInputs2.innerHTML = 'Ingrese un correo válido para resetear contraseña';
+    } else if (validationUpdatePassword(emailLogin.value)) {
+        resetPassword(emailLogin.value);
+        validInputs2.innerHTML = 'Se envió correo para el cambio de contraseña';
+    }
+  });
+  }
+
+
+  // *********** Loguea con Google **************************
+if (googleButton != null) {
+  googleButton.addEventListener('click', (e) => {
+    if (e.target) {
+      loginGoogle();
+    }
+  });
+  }
+  
+  // *********** Loguea al Facebook **************************
+  if (faceButton != null) {
+  faceButton.addEventListener('click', (e) => {
+    if (e.target) {
+      loginFacebook()
+    }
+  });
+  }
+  

@@ -10,12 +10,40 @@
   
 body {
   /* background-image:url(img/fondo.jpg); */
-  background-color:#40576E;
+  /* background-color: #1976d2; */
+  background-color: #ffffff;
   background-size: cover;
   font-family: Quicksand;
   background-repeat: no-repeat;
+  margin: 0;
+}
+
+main{
+  background-image: url(../IMG/fondos/azul_natural-1280x960.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:100vh;
+  background-position: center center;
+}
+.tamano{
+  size: 5px;
 }
   
+.section-forms {
+  width: 400px;
+  height: auto;
+  box-align: center;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding: 35px;
+  box-sizing: border-box;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+}
+
+
+
 .valid-inputs {
   color: red;
   font-weight: 600;
@@ -23,13 +51,15 @@ body {
   margin: 10px;
 }
 
-.slogan-login {
-  color:cornflowerblue;  
-  font-weight: 550;
-  font-size: 16px;
-  margin: 15px;
+.img-gota-agua{
+ height: 15%;
+ width: 15%
+} 
+
+#seccionPrincipalLoginRegistro, #section-forms{
+  background-color: #1976d2;
 }
-  
+
 .section-forms {
   width: 400px;
   height: auto;
@@ -56,13 +86,13 @@ body {
   text-align: center;
   padding-top: -10px;
   font-size: 16px;
-  color: #727272;
+  color: #1976d2;
   font-weight: 500;
 }
   
 .update-password {
   text-align: right;
-  color: #727272;
+  color: #1976d2;
   font-size: 12px;
   padding: auto;
   text-decoration: underline;
@@ -79,10 +109,15 @@ body {
   text-align: center;
   color: #ffffff;
 }
-
-.iconLoader {
-  background-image: url(img/ajax-loader.gif)
+.container{
+  padding: auto;
+  margin-top: 25px;
+  text-align: center;
 }
+
+/* .iconLoader {
+  background-image: url(img/ajax-loader.gif)
+} */
 
 .inputs {
   padding: 0px;
@@ -95,12 +130,14 @@ body {
  
 .input-field .prefix.active {
   /* color: #bd8e9c; */
-  color: cornflowerblue;
+  /* color: cornflowerblue; */
+  color: #1976d2;
 }
 
 .material-icons .prefix.active {
   /* color: #bd8e9c; */
-  color: cornflowerblue;
+  /* color: cornflowerblue; */
+  color: #1976d2;
 }
   
 input[type=email]:not(.browser-default):focus:not([readonly]),
@@ -146,11 +183,19 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
 }
 
 .slogan {
-  color: #40576E;
+  /* color: #40576E; */
+  color: #1976d2;
   font-weight: 550;
   font-size: 18px;
   margin: 16px;
   margin-bottom: 10px;
+}
+
+.slogan-login {
+  color:#1976d2;  
+  font-weight: 550;
+  font-size: 16px;
+  margin: 15px;
 }
 
 footer {
@@ -168,7 +213,7 @@ footer {
 }
 
 .link-to-register{
-  color: #40576E;
+  color: #1976d2;
   text-decoration:underline;
   font-weight: 700;
 }
