@@ -1,13 +1,13 @@
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAJeQyrbkbUxuq8p2wafd4m_T_OG-ILXpQ",
-    authDomain: "aguametrik-4bdbc.firebaseapp.com",
-    databaseURL: "https://aguametrik-4bdbc.firebaseio.com",
-    projectId: "aguametrik-4bdbc",
-    storageBucket: "aguametrik-4bdbc.appspot.com",
-    messagingSenderId: "1027300417762"
-  };
-  firebase.initializeApp(config);
+ // Initialize Firebase
+ var config = {
+  apiKey: "AIzaSyDfNv0S6DeJeVf717lMeJgFsz3lUmINNWE",
+  authDomain: "miredsocial-mrs.firebaseapp.com",
+  databaseURL: "https://miredsocial-mrs.firebaseio.com",
+  projectId: "miredsocial-mrs",
+  storageBucket: "miredsocial-mrs.appspot.com",
+  messagingSenderId: "794737309779"
+};
+firebase.initializeApp(config);
 
     // ******************************************************
     // ******************************************************
@@ -45,12 +45,12 @@
         console.log(user.emailVerified)
         console.log("antes de location")
         // location.href = 'sede.html';
-        // location.href = 'plataforma.html';
-        seccionPrincipalLoginRegistro.classList.replace('show','hidden');
-        seccionSidebar.classList.replace('hidden','show');
-        slideout.classList.replace('hidden','show');
-        seccionBotonMenu.classList.replace('hidden','show');
-        seccionBienvenidaALaPlataforma.classList.replace('hidden','show');
+        location.href = 'plataforma.html';
+        // seccionPrincipalLoginRegistro.classList.replace('show','hidden');
+        // seccionSidebar.classList.replace('hidden','show');
+        // slideout.classList.replace('hidden','show');
+        // seccionBotonMenu.classList.replace('hidden','show');
+        // seccionBienvenidaALaPlataforma.classList.replace('hidden','show');
 
       } else {
         alert('Por favor valida tu correo');

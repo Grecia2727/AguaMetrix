@@ -228,5 +228,7 @@ footer {
 }
   
 
-
-
+/* da color al grafico */
+#graphSedeMiConsumo{
+  background-color: aquamarine;
+}
