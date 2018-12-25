@@ -64,10 +64,6 @@ if (registerLink != null) {
   })
 }
 
-// ***************** Inicializo SIDE NAV ************************
-$(document).ready(function(){
-  $('.sidenav').sidenav();
-});
 
 // ***************** Inicializo select "Identificate"  ************************
 $(document).ready(function(){
@@ -239,20 +235,20 @@ if (updatePassword != null) {
 
 
   // *********** Loguea con Google **************************
-if (googleButton != null) {
-  googleButton.addEventListener('click', (e) => {
-    if (e.target) {
-      loginGoogle();
-    }
-  });
-  }
+// if (googleButton != null) {
+//   googleButton.addEventListener('click', (e) => {
+//     if (e.target) {
+//       loginGoogle();
+//     }
+//   });
+//   }
   
   // *********** Loguea al Facebook **************************
-  if (faceButton != null) {
-  faceButton.addEventListener('click', (e) => {
-    if (e.target) {
-      loginFacebook()
-    }
-  });
-  }
+  // if (faceButton != null) {
+  // faceButton.addEventListener('click', (e) => {
+  //   if (e.target) {
+  //     loginFacebook()
+  //   }
+  // });
+  // }
   

@@ -142,7 +142,6 @@
               </div>
             </div>
             <a href="#" id="registerButtonEmpresa" class="btn modal-trigger blue darken-2"> Registrar</a>
-            <!-- <input type="submit" name="" value="Insertar datos" id="btn-insertar-diagnostico"> -->
           </form>
         </div>
 
@@ -264,259 +263,26 @@
   </main>
 
 
-  <div id="confirm"></div>
-  <!-- ======================================================================================= -->
-  <!-- =============================  PLATAFORMA O MURO DE CADA EMPRESA  ===================== -->
-  <!-- ======================================================================================= -->
-  <!-- ======================================================================================= -->
-
-  <!-- MENU HAMBURQUESA (SIDENAV) -->
-  <!-- <nav class="indigo darken-4"> <img class="circle" src="IMG/Icono/AguaMetrik.ico"> -->
-  <nav id="seccionSidebar" class="indigo blue darken-1 hidden"> <img class="circle" src="IMG/Icono/AguaMetrik.ico">
-  </nav>
-  <ul id="slide-out" class="sidenav hidden">
-    <li>
-      <div class="user-view">
-        <div class="background indigo blue darken-1">
-          <img class="tamano" src="">
-        </div>
-        <a href="#user"><img class="circle" src="IMG/Logos/Favicon-Aguaconserve.jpg"></a>
-        <a href="#name"><span class="white-text name">Nombre Empresa</span></a>
-        <!-- <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a> -->
-      </div>
-    </li>
-    <li><a href="#seguimientoATuconsumo" id="btn-seguimientoATuconsumo"><i class="material-icons">chrome_reader_mode</i>Seguimiento
-        a tu consumo</a></li>
-    <!-- <li><a href="#!">Hacer un diagnóstico</a></li> -->
-    <li>
-      <div class="divider"></div>
-    </li>
-    <li><a class="subheader">También puedes:</a></li>
-    <li><a class="waves-effect" href="#menuRealizarUnDiagnostico" id="btn-menuRealizarUnDiagnostico"><i class="material-icons">touch_app</i>Realizar
-        un diagnóstico</a></li>
-    <li><a class="waves-effect" href="#menuVerDashboard" id="btn-menuVerDashboard"> <i class="material-icons">track_changes</i>Ver
-        dashboard</a></li>
-    <li><a class="waves-effect" href="#menuNuestraTecnologia" id="btn-menuNuestraTecnologia"> <i class="material-icons">business</i>Nuestra
-        tecnología</a></li>
-  </ul>
-  <a id="seccionBotonMenu" href="#" data-target="slide-out" class="indigo blue darken-1 sidenav-trigger btn-floating pulse hidden"><i
-      class="material-icons">menu</i></a>
-
-
-  <!-- SECCIÓN BIENVENIDA A LA PLATAFORMA AGUAMETRIK -->
-  <section id="seccionBienvenidaALaPlataforma" class="hidden">
-    <div class="container">
-      <img src="IMG/dibujo-gota/gota1.jpg" class="img-gota-agua">
-      <h4>Bienvenido al programa de consumo de Agua</h4>
-      <p>Con este programa podrás controlar tu consumo de agua mensual; además podrás saber que Hacer
-        para ahorrar más agua. Acompáñame en este recorrido. </p>
-      <input type="button" id="btn-iniciemosjuntos" value="Iniciemos Juntos" class="bot btn-large blue darken-2">
-    </div>
-
-  </section>
-
-  <!-- SECCIÓN SEGUIMIENTO A TU CONSUMO -->
-  <section id="seccionSeguimientoATuConsumo" class="hidden">
-    <div class="container">
-      <h4 id="seguimientoATuconsumo" class="color-black"> SEGUIMIENTO CONSUMO </h4>
-
-      <div class="row">
-        <img class="img-gota-agua" src="./IMG/dibujo-gota/gota-ahorrandook.jpg">
-        <div class="col s12 m12 l6 xl6">
-          <form id="form-sede">
-            <div class="form-group">
-              <input type="text" name="sedeNombre" value="" id="sede-nombre" placeholder="Nombre de sede">
-            </div>
-            <div class="form-group">
-              <input type="text" name="sedeUbicacion" value="" id="sede-ubicacion" placeholder="Ubicación">
-            </div>
-            <div class="form-group">
-              <input type="text" name="sedeSuministro" value="" id="sede-suministro" placeholder="Suministro">
-            </div>
-
-            <input class="bot btn-large blue darken-2" type="submit" name="" value="Insertar sede" id="btn-insertar-sede">
-          </form>
-        </div>
-
-        <div class="col s12 m12 l6 xl6">
-          
-          <!-- Tabla de SEDES -->
-          <table class="highlight">
-            <thead>
-              <tr>
-                <th scope="col">Sede</th>
-                <th scope="col">Ubicación</th>
-                <th scope="col">Suministro</th>
-                <th> </th>
-                <th> </th>
-              </tr>
-            </thead>
-            <tbody id="tbody-tabla-sede">
-
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- <div class="row" id="seccionFormularioParaLLenarConsumoDeAgua">
-        <div class="col s12 m12 l6 xl6">
-          <form id="form-consumo">
-            <div class="form-group">
-              <label for="modulo-año"> Año</label>
-              <input type="text" name="moduloAnio" class="form-control" value="" id="modulo-año">
-            </div>
-            <div class="form-group">
-              <label for="modulo-mes"> Mes</label>
-              <input type="text" name="moduloMes" class="form-control" value="" id="modulo-mes">
-            </div>
-            <div class="form-group">
-              <label for="modulo-montofacturado">Monto Facturado</label>
-              <input type="text" name="modulomontoFacturado" class="form-control" value="" id="modulo-montofacturado">
-            </div>
-            <div class="form-group">
-              <label for="modulo-consumodeagua"> Consumo de agua (m3)</label>
-              <input type="text" name="moduloConsumoDeAgua" class="form-control" value="" id="modulo-consumodeagua">
-            </div>
-            <div class="form-group">
-              <label for="modulo-tipodemadicion"> Tipo de medición</label>
-              <input type="text" name="moduloTipoDeMedicion" class="form-control" value="" id="modulo-tipodemadicion">
-            </div>
-            <input type="submit" name="" value="Insertar datos" id="btn-insertar-diagnostico">
-          </form>
-        </div>
-
-
-        <div class="col s12 m12 l6 xl6">
-         
-          <table class="highlight">
-            <thead>
-              <tr>
-                <th scope="col">Año</th>
-                <th scope="col">Mes</th>
-                <th scope="col">Monto</th>
-                <th scope="col">Consumo</th>
-                <th scope="col">Tipo Medicion</th>
-                <th scope="col">Ahorro</th>
-                <th scope="col">Eficiencia</th>
-                <th> </th>
-                <th> </th>
-              </tr>
-            </thead>
-            <tbody id="tbody-tabla-diagnostico">
-            </tbody>
-          </table>
-        </div>
-      </div> -->
-
-    </div>
-  </section>
-
-
-  <!-- SECCIÓN REALIZAR UN DIAGNÓSTICO -->
-  <aside id="seccionRealizarUnDiagnostico" class="hidden">
-    <div class="container">
-      <h5 id="realizarUnDiagnostico" class="color-black"> DIAGNÓSTICO </h5>
-
-      <div class="row">
-        <div class="col s12 m12 l6 xl6">
-          <form id="form-diagnostico">
-            <div class="form-group">
-              <label for="modulo-tipogrifo"> Tipo de Grifo</label>
-              <input type="text" name="moduloTipogrifo" class="form-control" value="" id="modulo-tipogrifo">
-            </div>
-            <div class="form-group">
-              <label for="modulo-unidades"> Numero de unidades</label>
-              <input type="text" name="moduloUnidades" class="form-control" value="" id="modulo-unidades">
-            </div>
-            <div class="form-group">
-              <label for="modulo-tipouso"> Tipo de Uso</label>
-              <input type="text" name="moduloTipouso" class="form-control" value="" id="modulo-tipouso">
-            </div>
-            <div class="form-group">
-              <label for="modulo-caudal"> Caudal</label>
-              <input type="text" name="moduloCaudal" class="form-control" value="" id="modulo-caudal">
-            </div>
-            <input class="bot btn-large blue darken-2" type="submit" name="" value="Insertar datos" id="btn-insertar-diagnostico">
-          </form>
-        </div>
-
-        <div class="col s12 m12 l6 xl6">
-          <!-- Tabla del Diagnóstico -->
-          <table class="highlight">
-            <thead>
-              <tr>
-                <th scope="col">Tipo de grifo</th>
-                <th scope="col">Unidades</th>
-                <th scope="col">Tipo de uso</th>
-                <th scope="col">Caudal</th>
-                <th scope="col">Ahorro</th>
-                <th scope="col">Descripción</th>
-                <th> </th>
-                <th> </th>
-              </tr>
-            </thead>
-            <tbody id="tbody-tabla-diagnostico">
-            </tbody>
-          </table>
-        </div>
-
-      </div>
-    </div>
-
- 
-
-  </aside>
-
-
-  <!-- SECCIÓN VER DASHBOARD - GRAFICOS -->
-  <aside id="seccionVerDashboard" class="hidden">
-    <div class="container">
-      <h5 id="verDashboard" class="color-black"> DASHBOARD </h5>
-      <img src="IMG/dashboard.png">
-    </div>
-  </aside>
-
-  <!-- SECCIÓN NUESTRA TECNOLOGÍA -->
-  <aside id="seccionNuestraTecnologia" class="hidden">
-    <div class="container">
-      <h5 id="menuNuestraTecnologia"> NUETSRA TECNOLOGIA </h5>
-      <p> It looks like you're using the development build of the Firebase JS SDK.
-        When deploying Firebase apps to production, it is advisable to only import
-        the individual SDK components you intend to use.</p>
-      <p> It looks like you're using the development build of the Firebase JS SDK.
-        When deploying Firebase apps to production, it is advisable to only import
-        the individual SDK components you intend to use.</p>
-
-    </div>
-    <div class="video-container">
-      <!-- para link dek video considerar el link: EMBED CODE; solo el link de video  -->
-      <iframe width="853" height="480" src="//www.youtube.com/embed/rXW5oLhBMCE" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <!-- <video class="responsive-video" controls>
-          <source src="movie.mp4" type="video/mp4">
-      </video> -->
-
-  </aside>
-
+  <!-- <div id="confirm"></div> -->
 
   <!--  ======== SECCIÓN PIE DE PÁGINA =========-->
   <footer>
 
   </footer>
-
+ 
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="firebase.js">      </script>
-  <script src="login_empresa.js">      </script>
   <script src="login_colaborador.js">      </script>
   <script src="login_usuario.js">      </script>
-  <script src="js/Tabla_diagnostico.js"></script>
+  <!-- <script src="js/Tabla_diagnostico.js"></script> -->
   <script src="js/validations.js">   </script>
   <script src="js/login-dom.js">     </script>
-  <script src="js/plataforma-dom.js"> </script>
-  <script src="js/sede.js"> </script>
+  <script src="login_empresa.js">      </script>
+  <!-- <script src="js/plataforma-dom.js"> </script> -->
+  <!-- <script src="js/sede.js"> </script> -->
 </body>
 </html>

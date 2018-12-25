@@ -2,20 +2,32 @@ const seccionSeguimientoATuConsumo = document.getElementById("seccionSeguimiento
 const seccionRealizarUnDiagnostico = document.getElementById("seccionRealizarUnDiagnostico");
 const seccionVerDashboard          = document.getElementById("seccionVerDashboard");
 const seccionNuestraTecnologia     = document.getElementById("seccionNuestraTecnologia");
+const outButton                    = document.getElementById("signOut");
+// const arcText                      = document.getElementById("arcText");
+// const arcTexto = $("#arcText"); 
+// $arcTexto.arctext({radius: 300});
+
+// Cerrar sesión
+if (outButton != null) {
+	outButton.addEventListener('click', () => {
+		signOut();
+		window.location.href = 'index.html';
+	});
+}
 
 // botones del Menu - navBar
-const btnSeguimientoATuconsumo = document.getElementById("btn-seguimientoATuconsumo");
+const btnSeguimientoATuconsumo     = document.getElementById("btn-seguimientoATuconsumo");
 const btnMenuRealizarUnDiagnostico = document.getElementById("btn-menuRealizarUnDiagnostico");
-const btnMenuVerDashboard = document.getElementById("btn-menuVerDashboard");
-const btnMenuNuestraTecnologia = document.getElementById("btn-menuNuestraTecnologia");
-const btnIniciemosJuntos = document.getElementById("btn-iniciemosjuntos");
+const btnMenuVerDashboard          = document.getElementById("btn-menuVerDashboard");
+const btnMenuNuestraTecnologia     = document.getElementById("btn-menuNuestraTecnologia");
+const btnIniciemosJuntos           = document.getElementById("btn-iniciemosjuntos");
 
 // Formularios de secciones del menu NavBar
-const seccionSidebar = document.getElementById("seccionSidebar");
-const slideout = document.getElementById("slide-out");
-const seccionBotonMenu = document.getElementById("seccionBotonMenu");
+const seccionSidebar                = document.getElementById("seccionSidebar");
+const slideout                      = document.getElementById("slide-out");
+const seccionBotonMenu              = document.getElementById("seccionBotonMenu");
 const seccionPrincipalLoginRegistro = document.getElementById("seccionPrincipalLoginRegistro");
-const seccionBienvenidaALaPlataforma = document.getElementById("seccionBienvenidaALaPlataforma");
+const seccionBienvenidaALaPlataforma= document.getElementById("seccionBienvenidaALaPlataforma");
 
 
 btnIniciemosJuntos.addEventListener('click', ()=>{
@@ -57,3 +69,4 @@ btnMenuNuestraTecnologia.addEventListener('click', ()=>{
     seccionVerDashboard.classList.replace('show','hidden');
     seccionNuestraTecnologia.classList.replace('hidden','show');
 });
+
